@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState, useRef } from 'react';
 import './App.css';
+import FAQs from './components/FAQs';
+import Footer from './components/Footer';
+import Hero from './components/Hero';
+import HeroFour from './components/HeroFour';
+import HeroThree from './components/HeroThree';
+import HeroTwo from './components/HeroTwo';
+import MobileLinks from './components/MobileLinks';
+import Nav from './components/Nav';
+import Slider from './components/Slider';
+import Testimonies from './components/Testimonies';
+import './index.css';
 
-function App() {
+const App: React.FC = () => {
+  const [showMobile, setShowMobile] = useState<boolean>(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='bg-primary w-full font-courier relative App'>
+      <Nav showMobile={showMobile} setShowMobile={setShowMobile} />
+      <MobileLinks showMobile={showMobile} />
+      <Hero />
+      <Slider />
+      <HeroTwo />
+      <HeroThree />
+      <Testimonies />
+      <HeroFour />
+      <FAQs />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
