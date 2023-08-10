@@ -37,6 +37,7 @@ const FAQs = () => {
     return (
       <div
         className={` border-t-2 border-b-2 border-black
+        transition-all duration-300
         
 
         ${id === 3 ? 'mb-4' : ''}
@@ -45,11 +46,16 @@ const FAQs = () => {
           borderTop: `${id > 1 && '0'}`,
         }}
       >
-        <div className='flex justify-between items-center py-4'>
+        <div
+          className='flex justify-between items-center py-4
+        transition-all duration-300
+        '
+        >
           <h3>{question}</h3>
           <div
             onClick={() => setShowAnswer(!showAnswer)}
-            className='cursor-pointer'
+            className='cursor-pointer
+            transition-all duration-300'
           >
             {!showAnswer ? (
               <AiOutlinePlus size={20} />
@@ -58,7 +64,13 @@ const FAQs = () => {
             )}
           </div>
         </div>
-        <p className={`${!showAnswer && 'hidden'} mb-4`}>{answer}</p>
+        <p
+          className={`${
+            !showAnswer && 'hidden'
+          } mb-4 transition-all duration-300`}
+        >
+          {answer}
+        </p>
       </div>
     );
   };
@@ -67,15 +79,11 @@ const FAQs = () => {
     <div className='relative bg-gree-400 mt-[-15rem] w-full h-[300px]'>
       <article
         className='border-2 border-solid border-black w-[85%] mx-auto px-10 py-5 bg-tertiary absolute left-1/2 transform -translate-x-1/2 max-h-[300px] overflow-x-scroll   bottom-[-8rem]
-        
-      
- 
-
       '
       >
         <h1 className='text-center mb-4'>Frequently Asked Questions (FAQs)</h1>
         {/*  */}
-        <div>
+        <div className='transition-all duration-300'>
           {faqs.map((f) => (
             <QuestionAnswer
               key={f.id}

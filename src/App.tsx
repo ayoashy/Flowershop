@@ -11,6 +11,7 @@ import Nav from './components/Nav';
 import Slider from './components/Slider';
 import Testimonies from './components/Testimonies';
 import './index.css';
+import SortTable from './components/SortTable';
 
 const App: React.FC = () => {
   const [showMobile, setShowMobile] = useState<boolean>(false);
@@ -26,6 +27,7 @@ const App: React.FC = () => {
       <HeroFour />
       <FAQs />
       <Footer />
+      <SortTable />
     </div>
   );
 };
