@@ -1,33 +1,26 @@
-import React, { useState, useRef } from 'react';
 import './App.css';
-import FAQs from './components/FAQs';
-import Footer from './components/Footer';
-import Hero from './components/Hero';
-import HeroFour from './components/HeroFour';
-import HeroThree from './components/HeroThree';
-import HeroTwo from './components/HeroTwo';
-import MobileLinks from './components/MobileLinks';
-import Nav from './components/Nav';
-import Slider from './components/Slider';
-import Testimonies from './components/Testimonies';
 import './index.css';
-import SortTable from './components/SortTable';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Home from './components/pages/Home';
 
 const App: React.FC = () => {
-  const [showMobile, setShowMobile] = useState<boolean>(false);
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Home />,
+    },
+    {
+      path: '/about',
+      element: <h3>This might be about page</h3>,
+    },
+    {
+      path: '/*',
+      element: <h1>Not found page</h1>,
+    },
+  ]);
   return (
-    <div className='bg-primary w-full font-courier relative App'>
-      <Nav showMobile={showMobile} setShowMobile={setShowMobile} />
-      <MobileLinks showMobile={showMobile} />
-      <Hero />
-      <Slider />
-      <HeroTwo />
-      <HeroThree />
-      <Testimonies />
-      <HeroFour />
-      <FAQs />
-      <Footer />
-      <SortTable />
+    <div>
+      <RouterProvider router={router} />
     </div>
   );
 };

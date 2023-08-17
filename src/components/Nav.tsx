@@ -2,6 +2,7 @@ import React from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { GrClose } from 'react-icons/gr';
 import { AiOutlineShopping } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 type NavProp = {
   setShowMobile: React.Dispatch<React.SetStateAction<boolean>>;
@@ -11,23 +12,28 @@ type NavProp = {
 type Links = {
   link: string;
   id: number;
+  url: string;
 };
 
 const links: Links[] = [
   {
     link: 'Flowers',
+    url: '/flowers',
     id: 1,
   },
   {
     link: 'Cafe',
+    url: '/cafe',
     id: 2,
   },
   {
     link: 'About Us',
+    url: '/about-us',
     id: 3,
   },
   {
     link: 'Blog',
+    url: '/blog',
     id: 4,
   },
 ];
@@ -46,12 +52,13 @@ const Nav = ({ setShowMobile, showMobile }: NavProp) => {
 
           <div className='hidden md:flex list-none'>
             {links.map((link) => (
-              <li
+              <Link
+                to={link.url}
                 className='mr-2 text-sm md:text-sm lg:text-md cursor-pointer hover:bg-secondary hover:text-white py-1 px-2 rounded-sm duration-700 ease-in-out'
                 key={link.id}
               >
                 {link.link}
-              </li>
+              </Link>
             ))}
           </div>
         </div>

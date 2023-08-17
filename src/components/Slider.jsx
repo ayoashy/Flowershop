@@ -7,7 +7,7 @@ const SliderComponent = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 5000,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
@@ -17,74 +17,48 @@ const SliderComponent = () => {
   const Images = [
     {
       id: 1,
-      src: 'https://images.unsplash.com/photo-1552519507-da3b142c6e3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+      src: 'https://images.unsplash.com/photo-1457460866886-40ef8d4b42a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdHVhcmFudCUyMGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
       alt: 'Image 1',
-      title: 'Lamborghini Huracan Performante',
-      description:
-        'The Huracán Performante has reworked the concept of super sports cars and taken the notion of performance to levels never seen before.',
     },
     {
       id: 2,
-      src: 'https://images.unsplash.com/photo-1594502184342-2e12f877aa73?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80',
+      src: 'https://images.unsplash.com/photo-1600891964092-4316c288032e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmVzdHVhcmFudCUyMGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
       alt: 'Image 2 ',
-      title: 'Porsche 911 Turbo S',
-      description:
-        'This Turbo S variant comes with an engine putting out 641 bhp @ 6750 rpm and 800 Nm @ 2500 rpm of max power and max torque respectively.',
     },
     {
       id: 3,
-      src: 'https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+      src: 'https://images.unsplash.com/photo-1514537193821-ed4955693802?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmVzdHVhcmFudCUyMGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
       alt: 'Image 3',
-      title: 'Ford Mustang',
-      description: 'For offroad lovers. Super fast, Super Comfortable.',
     },
     {
       id: 4,
-      src: 'https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=452&q=80',
+      src: 'https://images.unsplash.com/photo-1600891965230-bab485b08bbd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHJlc3R1YXJhbnQlMjBmb29kfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
       alt: 'Image 4',
-      title: 'Lamborghini Aventador SV',
-      description:
-        'Aventador SV provide thrills unlike anything that has ever been experienced before.',
     },
     {
       id: 5,
-      src: 'https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80',
+      src: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWZyaWNhbiUyMGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
       alt: 'Image 5',
-      title: 'Ferrari 458 Speciale',
-      description:
-        '0 to 100 km/h (0 to 62 mph) takes 3.0 seconds and the Spider is capable of a top speed of 400 km/h (249 mph).',
     },
     {
       id: 6,
-      src: 'https://images.unsplash.com/photo-1471479917193-f00955256257?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1631&q=80',
+      src: 'https://images.unsplash.com/photo-1604329756574-bda1f2cada6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YWZyaWNhbiUyMGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
       alt: 'Image 6',
-      title: 'Porsche 911',
-      description:
-        'The Porsche 911 (pronounced Nine Eleven or in German: Neunelfer) is a two-door 2+2 high performance rear-engined sports car.',
     },
     {
       id: 7,
-      src: 'https://images.unsplash.com/photo-1555353540-64580b51c258?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=378&q=80',
+      src: 'https://images.unsplash.com/photo-1608500218861-01091cdc501e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWZyaWNhbiUyMGZvb2R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60',
       alt: 'Image 7',
-      title: 'Dodge Challenger',
-      description:
-        'The Challenger has a classic muscle-car interior, with a simple design',
     },
     {
       id: 8,
-      src: 'https://i.pinimg.com/750x/88/33/1b/88331be20045f95b28e91e21fa663ad0.jpg',
+      src: 'https://images.unsplash.com/photo-1541518763669-27fef04b14ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFmcmljYW4lMjBmb29kfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
       alt: 'Image 8',
-      title: 'Lamborghini Gallardo',
-      description:
-        'The Gallardo is a 2 seater 10 cylinder car and has length of 4345mm, width of 1900mm and a wheelbase of 2560mm.',
     },
     {
       id: 9,
-      src: 'https://i.pinimg.com/564x/2e/40/02/2e40027b9b156589cfbccbf7b33d3bc7.jpg',
+      src: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGFmcmljYW4lMjBmb29kfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60',
       alt: 'Image 9',
-      title: '2021 Mercedes-AMG GLE53 Coupe electrifies',
-      description:
-        'Its electric motor can provide up to 184 pound-feet of torque on demand.',
     },
   ];
   return (
@@ -97,8 +71,7 @@ const SliderComponent = () => {
               alt={item.alt}
               className='h-full w-full object-cover'
             />
-            {/* <h2 className='title'>{item.title}</h2>
-            <p className='description'>{item.description}</p> */}
+            <h2 className='title'>{item.alt}</h2>
           </div>
         ))}{' '}
       </Slider>
