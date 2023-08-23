@@ -63,7 +63,7 @@ const SliderComponent = () => {
   ];
   return (
     <div className='h-52 w-full bg-green-300'>
-      <Slider {...settings}>
+      {/* <Slider {...settings}>
         {Images.map((item) => (
           <div key={item.id} className='h-52 w-52 '>
             <img
@@ -73,8 +73,9 @@ const SliderComponent = () => {
             />
             <h2 className='title'>{item.alt}</h2>
           </div>
-        ))}{' '}
-      </Slider>
+        ))}
+      </Slider> */}
+      slider to be here
     </div>
   );
 };

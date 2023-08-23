@@ -12,6 +12,7 @@ import Nav from '../Nav';
 import SortTable from '../SortTable';
 import SwitchComponent from '../Switch';
 import Testimonies from '../Testimonies';
+import Swiper from '../Swiper';
 
 const Home = () => {
   const [showMobile, setShowMobile] = useState<boolean>(false);
@@ -21,16 +22,14 @@ const Home = () => {
         <Nav showMobile={showMobile} setShowMobile={setShowMobile} />
         <MobileLinks showMobile={showMobile} />
         <Hero />
-        <Slider />
+        {/* <Slider /> */}
+        <Swiper />
         <HeroTwo />
         <HeroThree />
         <Testimonies />
         <HeroFour />
         <FAQs />
         <Footer />
-        <SortTable />
-        <Animate />
-        <SwitchComponent />
       </div>
     </div>
   );
