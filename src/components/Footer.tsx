@@ -32,6 +32,8 @@ const Footer = () => {
         <h1>
           Cafe - <span className='text-footerBtn'>0815 990 6666</span>
         </h1>
+        <p>screen with {window.innerWidth}</p>
+        <p>screen height {window.innerHeight}</p>
         <h1>
           Flowershop - <span className='text-footerBtn'>0815 990 6666</span>
         </h1>
