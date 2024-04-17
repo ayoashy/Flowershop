@@ -1,4 +1,4 @@
-import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/modules';
+// import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import 'swiper/swiper-bundle.min.css';
 import 'swiper/css';
@@ -61,26 +61,27 @@ const images = [
 
 export default () => {
   return (
-    <Swiper
-      spaceBetween={0}
-      slidesPerView={4}
-      autoplay={true}
-      // navigation
-      // modules={[Navigation, Pagination, Scrollbar, A11y]}
-      pagination={{ clickable: true }}
-    >
-      {images.map((image) => (
-        <SwiperSlide key={image.id} data-swiper-autoplay='2000'>
-          <div className='h-52 w-full'>
-            <img
-              src={image.src}
-              alt={image.alt}
-              className='w-full object-cover h-full'
-            />
-          </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    // <Swiper
+    //   spaceBetween={0}
+    //   slidesPerView={4}
+    //   autoplay={true}
+    //   // navigation
+    //   // modules={[Navigation, Pagination, Scrollbar, A11y]}
+    //   pagination={{ clickable: true }}
+    // >
+    //   {images.map((image) => (
+    //     <SwiperSlide key={image.id} data-swiper-autoplay='2000'>
+    //       <div className='h-52 w-full'>
+    //         <img
+    //           src={image.src}
+    //           alt={image.alt}
+    //           className='w-full object-cover h-full'
+    //         />
+    //       </div>
+    //     </SwiperSlide>
+    //   ))}
+    // </Swiper>
+    <div></div>
   );
 };
 
